@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-table .mat-row:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+@mixin mat-table-hover($is-dark) {
+  [mat-row] {
+    @if $is-dark {
+      &:hover {
+        background: rgba(255, 255, 255, 0.04);
+      }
+    }
+    @else {
+      &:hover {
+        background: rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+}
